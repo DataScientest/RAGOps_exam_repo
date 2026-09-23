@@ -1,0 +1,6 @@
+-r requirements.txt
+pytest==9.1.1
+fakeredis==2.38.0
+# used by tests/test_metadata.py
+requests==2.34.2
+fpdf2==2.8.8
