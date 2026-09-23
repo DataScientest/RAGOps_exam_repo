@@ -23,6 +23,7 @@ All functionality must remain **runnable and testable** via:
 
 ```bash
 docker-compose up --build
+pip install -r backend/requirements-dev.txt  # test dependencies (pytest, requests, fpdf2)
 pytest tests/test_metadata.py
 ```
 
@@ -106,7 +107,7 @@ CREATE TABLE IF NOT EXISTS documents (
 
 ```yaml
 minio:
-  image: minio/minio
+  image: quay.io/minio/minio:RELEASE.2025-09-07T16-13-09Z  # minio/minio is no longer published on Docker Hub
   command: server /data --console-address ":9001"
   environment:
     MINIO_ROOT_USER: minioadmin
