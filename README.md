@@ -22,7 +22,7 @@ You should **not modify** the LiteLLM folder, the monitoring stack, or core RAGO
 All functionality must remain **runnable and testable** via:
 
 ```bash
-docker-compose up --build
+docker compose up --build
 pip install -r backend/requirements-dev.txt  # test dependencies (pytest, requests, fpdf2)
 pytest tests/test_metadata.py
 ```
